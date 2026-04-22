@@ -6,11 +6,10 @@ const testPassword = "bacon";
 
 async function run() {
   try {
-    // перевіряємо, чи існує файл
     if (!fs.existsSync(filePath)) {
       console.log("Файл не знайдено. Створюємо новий хеш...");
 
-      const password = "bacon"; // початковий пароль
+      const password = "bacon"; 
       const saltRounds = 10;
 
       const hash = await bcrypt.hash(password, saltRounds);
